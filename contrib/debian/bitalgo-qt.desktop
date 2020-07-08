@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=BitalGO Core
+Comment=BitalGO P2P Cryptocurrency
+Comment[fr]=BitalGO, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BitalGO, eşten eşe kriptografik sanal para birimi
+Exec=bitalgo-qt %u
+Terminal=false
+Type=Application
+Icon=bitalgo128
+MimeType=x-scheme-handler/bitalgo;
+Categories=Office;Finance;
+StartupWMClass=BitalGO-qt

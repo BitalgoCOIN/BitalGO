@@ -1,0 +1,5 @@
+bitcoin               ICON    "pixmaps/bitalgo.ico"
+
+#include "wx/msw/wx.rc"
+
+favicon               ICON    "pixmaps/favicon.ico"

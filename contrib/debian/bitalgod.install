@@ -1,0 +1,3 @@
+usr/local/bin/bitalgod usr/bin
+usr/local/bin/bitalgo-cli usr/bin
+debian/examples/bitalgo.conf etc/bitalgo

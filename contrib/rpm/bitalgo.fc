@@ -1,0 +1,8 @@
+/usr/bin/bitalgo-cli		--	gen_context(system_u:object_r:bitalgo_exec_t,s0)
+/usr/sbin/bitalgod		--	gen_context(system_u:object_r:bitalgo_exec_t,s0)
+/usr/lib(64)?/bitalgo/bitalgod		--	gen_context(system_u:object_r:bitalgo_exec_t,s0)
+
+/etc/bitalgo(/.*)?		gen_context(system_u:object_r:bitalgo_conf_t,s0)
+/var/lib/bitalgo(/.*)?		gen_context(system_u:object_r:bitalgo_var_lib_t,s0)
+
+(/var)?/run/bitalgod(/.*)?   gen_context(system_u:object_r:bitalgo_var_run_t,s0)

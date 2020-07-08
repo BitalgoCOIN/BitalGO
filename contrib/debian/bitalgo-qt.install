@@ -1,0 +1,6 @@
+usr/local/bin/bitalgo-qt usr/bin
+share/pixmaps/bitalgo32.xpm usr/share/pixmaps
+share/pixmaps/bitalgo16.xpm usr/share/pixmaps
+share/pixmaps/bitalgo128.png usr/share/pixmaps
+debian/bitalgo-qt.desktop usr/share/applications
+debian/bitalgo-qt.protocol usr/share/kde4/services/

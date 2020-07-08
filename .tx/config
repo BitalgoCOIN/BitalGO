@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[bitalgo-project-translations.qt-translation-41x]
+file_filter = src/qt/locale/bitalgo_<lang>.ts
+source_file = src/qt/locale/bitalgo_en.ts
+source_lang = en

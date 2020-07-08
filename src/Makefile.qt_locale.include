@@ -1,0 +1,14 @@
+QT_TS = \
+  qt/locale/bitalgo_de.ts \
+  qt/locale/bitalgo_en.ts \
+  qt/locale/bitalgo_en_US.ts \
+  qt/locale/bitalgo_es.ts \
+  qt/locale/bitalgo_fr_FR.ts \
+  qt/locale/bitalgo_hr_HR.ts \
+  qt/locale/bitalgo_it.ts \
+  qt/locale/bitalgo_ko_KR.ts \
+  qt/locale/bitalgo_nl.ts \
+  qt/locale/bitalgo_pl.ts \
+  qt/locale/bitalgo_ru.ts \
+  qt/locale/bitalgo_tr.ts \
+  qt/locale/bitalgo_zh_CN.ts
