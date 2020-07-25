@@ -342,7 +342,7 @@
                   <enum>Qt::NoFocus</enum>
                  </property>
                  <property name="text">
-                  <string>https://BitalGO.org/</string>
+                  <string>https://bitalgopayment.com/</string>
                  </property>
                 </widget>
                </item>
@@ -817,11 +817,8 @@
                          <string>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;
                            We have support channels in most of our official chat groups, for example
-                           &lt;a style='color: #fac784' href='https://discord.BitalGO.org'&gt;
-                           #support in our Discord&lt;/a&gt;.
-                           If you prefer to submit a ticket, One can be
-                           &lt;a style='color: #fac784' href='https://BitalGO.freshdesk.com'&gt;
-                           our Freshdesk support site&lt;/a&gt;.
+                           &lt;a style='color: #fac784' href='https://t.me/bitalgoteam'&gt;
+                           #support in our Telegram&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </string>
                         </property>
