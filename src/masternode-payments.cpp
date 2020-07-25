@@ -315,15 +315,11 @@ bool IsBlockPayeeValid(const CBlock& block, int nBlockHeight)
         return true;
     LogPrint(BCLog::MASTERNODE,"Invalid mn payment detected %s\n", txNew.ToString().c_str());
 
-	if ((nBlockHeight > 1495 && nBlockHeight <= 1530) || (nBlockHeight > 2995 && nBlockHeight <= 4530) || (nBlockHeight > 4495 && nBlockHeight <= 30030) || (nBlockHeight > 29995 && nBlockHeight <= 40030)){
-		LogPrint(BCLog::MASTERNODE, "Masternode payment enforcement is disabled, accepting block\n");
-		return true;
-	}
-	else {
-		if (sporkManager.IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
-			return false;
-	}
-    
+	
+	if (sporkManager.IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
+		return false;
+	
+	return true;
 }
 
 
@@ -369,7 +365,7 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFe
     }
 
     CAmount blockValue = GetBlockValue(pindexPrev->nHeight + 1);
-    CAmount masternodePayment = GetMasternodePayment(blockValue);
+    CAmount masternodePayment = GetMasternodePayment(blockValue, pindexPrev->nHeight + 1);
 
     if (hasPayment) {
         if (fProofOfStake) {
@@ -598,7 +594,7 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew)
 
     std::string strPayeesPossible = "";
 	CAmount nReward = GetBlockValue(nBlockHeight);
-    CAmount requiredMasternodePayment = GetMasternodePayment(nReward);
+    CAmount requiredMasternodePayment = GetMasternodePayment(nReward, nBlockHeight);
 
     for (CMasternodePayee& payee : vecPayments) {
         bool found = false;

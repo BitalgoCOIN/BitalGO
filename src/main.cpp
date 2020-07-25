@@ -1615,17 +1615,24 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = 10 * COIN;
     } else if (nHeight <= 25000 && nHeight > 5000) {
         nSubsidy = 15 * COIN;
-    } else if (nHeight <= 4395400 && nHeight > 25000) {
+    } else if (nHeight <= 42000 && nHeight > 25000) {
         nSubsidy = 5 * COIN;
-    } else {
-        nSubsidy = 0 * COIN;
-    }
+    } else if (nHeight <= 21809000 && nHeight > 42000){
+        nSubsidy = 1 * COIN;
+	} else {
+		nSubsidy = 0;
+	}
     return nSubsidy;
 }
 
-int64_t GetMasternodePayment(int64_t blockValue)
+int64_t GetMasternodePayment(int64_t blockValue, int nHeight)
 {
-    return blockValue * 3 / 4;  //75%
+	if (nHeight <= 42000) {
+		return blockValue * 3 / 4;  //75%
+	}
+	else {
+		return blockValue * 1 / 2;
+	}
 }
 
 bool IsInitialBlockDownload()
@@ -3176,7 +3183,7 @@ bool CheckColdStakeFreeOutput(const CTransaction& tx, const int nHeight)
     if (outs >=3 && lastOut.scriptPubKey != tx.vout[outs-2].scriptPubKey) {
 
 		CAmount blockValue = GetBlockValue(nHeight);
-		CAmount masternodePayment = GetMasternodePayment(blockValue);
+		CAmount masternodePayment = GetMasternodePayment(blockValue, nHeight);
 
         if (lastOut.nValue == masternodePayment)
             return true;

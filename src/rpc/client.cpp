@@ -135,6 +135,8 @@ static const CRPCConvertParam vRPCConvertParams[] =
         {"mnvoteraw", 1},
         {"mnvoteraw", 4},
         {"setstakesplitthreshold", 0},
+		{ "autocombinerewards", 0 },
+		{ "autocombinerewards", 1 },
         {"getblockindexstats", 0},
         {"getblockindexstats", 1},
         {"getblockindexstats", 2},
